@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		916DF52D1D10928100ACCB34 /* MyFilm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916DF52B1D10928100ACCB34 /* MyFilm+CoreDataProperties.swift */; };
+		916DF52E1D10928100ACCB34 /* MyFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916DF52C1D10928100ACCB34 /* MyFilm.swift */; };
+		91A4E7671CD8C7FD00751E29 /* Film+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4E7651CD8C7FD00751E29 /* Film+CoreDataProperties.swift */; };
+		91A4E7681CD8C7FD00751E29 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4E7661CD8C7FD00751E29 /* Film.swift */; };
 		91DDDA331CC8E63400FC7EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDDA321CC8E63400FC7EF0 /* AppDelegate.swift */; };
 		91DDDA351CC8E63400FC7EF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDDA341CC8E63400FC7EF0 /* ViewController.swift */; };
 		91DDDA381CC8E63400FC7EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DDDA361CC8E63400FC7EF0 /* Main.storyboard */; };
@@ -15,6 +19,9 @@
 		91DDDA401CC8E63400FC7EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DDDA3E1CC8E63400FC7EF0 /* LaunchScreen.storyboard */; };
 		91DDDA4B1CC8E63400FC7EF0 /* FavFilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDDA4A1CC8E63400FC7EF0 /* FavFilmsTests.swift */; };
 		91DDDA561CC8E63400FC7EF0 /* FavFilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDDA551CC8E63400FC7EF0 /* FavFilmsUITests.swift */; };
+		91DDDA641CC8F47D00FC7EF0 /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDDA631CC8F47D00FC7EF0 /* FilmCell.swift */; };
+		91DDDA661CC92C0800FC7EF0 /* AddFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDDA651CC92C0800FC7EF0 /* AddFilm.swift */; };
+		91E1E8721CDA0E3700D548BC /* descViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E1E8711CDA0E3700D548BC /* descViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		916DF52B1D10928100ACCB34 /* MyFilm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyFilm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		916DF52C1D10928100ACCB34 /* MyFilm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFilm.swift; sourceTree = "<group>"; };
+		91A4E7651CD8C7FD00751E29 /* Film+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Film+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		91A4E7661CD8C7FD00751E29 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		91DDDA2F1CC8E63400FC7EF0 /* FavFilms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavFilms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DDDA321CC8E63400FC7EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DDDA341CC8E63400FC7EF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +60,10 @@
 		91DDDA511CC8E63400FC7EF0 /* FavFilmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavFilmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DDDA551CC8E63400FC7EF0 /* FavFilmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavFilmsUITests.swift; sourceTree = "<group>"; };
 		91DDDA571CC8E63400FC7EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91DDDA631CC8F47D00FC7EF0 /* FilmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
+		91DDDA651CC92C0800FC7EF0 /* AddFilm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFilm.swift; sourceTree = "<group>"; };
+		91DDDA671CCA98C500FC7EF0 /* FavFilms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FavFilms-Bridging-Header.h"; sourceTree = "<group>"; };
+		91E1E8711CDA0E3700D548BC /* descViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = descViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +94,16 @@
 		91DDDA261CC8E63400FC7EF0 = {
 			isa = PBXGroup;
 			children = (
+				916DF52B1D10928100ACCB34 /* MyFilm+CoreDataProperties.swift */,
+				916DF52C1D10928100ACCB34 /* MyFilm.swift */,
+				91A4E7651CD8C7FD00751E29 /* Film+CoreDataProperties.swift */,
+				91A4E7661CD8C7FD00751E29 /* Film.swift */,
+				91DDDA631CC8F47D00FC7EF0 /* FilmCell.swift */,
 				91DDDA311CC8E63400FC7EF0 /* FavFilms */,
 				91DDDA491CC8E63400FC7EF0 /* FavFilmsTests */,
 				91DDDA541CC8E63400FC7EF0 /* FavFilmsUITests */,
 				91DDDA301CC8E63400FC7EF0 /* Products */,
+				91DDDA671CCA98C500FC7EF0 /* FavFilms-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +123,8 @@
 				91DDDA321CC8E63400FC7EF0 /* AppDelegate.swift */,
 				91DDDA341CC8E63400FC7EF0 /* ViewController.swift */,
 				91DDDA361CC8E63400FC7EF0 /* Main.storyboard */,
+				91E1E8711CDA0E3700D548BC /* descViewController.swift */,
+				91DDDA651CC92C0800FC7EF0 /* AddFilm.swift */,
 				91DDDA3C1CC8E63400FC7EF0 /* Assets.xcassets */,
 				91DDDA3E1CC8E63400FC7EF0 /* LaunchScreen.storyboard */,
 				91DDDA411CC8E63400FC7EF0 /* Info.plist */,
@@ -259,9 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DDDA661CC92C0800FC7EF0 /* AddFilm.swift in Sources */,
+				91E1E8721CDA0E3700D548BC /* descViewController.swift in Sources */,
 				91DDDA351CC8E63400FC7EF0 /* ViewController.swift in Sources */,
+				91DDDA641CC8F47D00FC7EF0 /* FilmCell.swift in Sources */,
 				91DDDA331CC8E63400FC7EF0 /* AppDelegate.swift in Sources */,
 				91DDDA3B1CC8E63400FC7EF0 /* FavFilms.xcdatamodeld in Sources */,
+				91A4E7671CD8C7FD00751E29 /* Film+CoreDataProperties.swift in Sources */,
+				916DF52E1D10928100ACCB34 /* MyFilm.swift in Sources */,
+				91A4E7681CD8C7FD00751E29 /* Film.swift in Sources */,
+				916DF52D1D10928100ACCB34 /* MyFilm+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +433,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FavFilms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kt.FavFilms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FavFilms-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,10 +447,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FavFilms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kt.FavFilms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FavFilms-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -488,6 +523,7 @@
 				91DDDA5C1CC8E63400FC7EF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91DDDA5D1CC8E63400FC7EF0 /* Build configuration list for PBXNativeTarget "FavFilmsTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +532,7 @@
 				91DDDA5F1CC8E63400FC7EF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91DDDA601CC8E63400FC7EF0 /* Build configuration list for PBXNativeTarget "FavFilmsUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +541,7 @@
 				91DDDA621CC8E63400FC7EF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
