@@ -26,29 +26,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
   
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         fetchAndSetResults()
         tableView.reloadData()
         
     }
     func fetchAndSetResults(){
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "Film")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Film")
+        
     
     do{
-    let results = try context.executeFetchRequest(fetchRequest)
+    let results = try context.fetch(fetchRequest)
         self.films = results as! [Film]
-        print("\n\n\n\n\n films One", films[2].filmImage)
+    //    print("\n\n\n\n\n films One", films[2].filmImage)
     }catch let err as NSError{
         print(err.debugDescription)
         }
     }
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       if let cell = tableView.dequeueReusableCellWithIdentifier("FilmCell") as? FilmCell{
-        let film = films[indexPath.row]
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       if let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell") as? FilmCell{
+        let film = films[(indexPath as NSIndexPath).row]
         cell.configureCell(film)
         return cell
         
@@ -56,29 +57,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     return FilmCell()
     }
     }
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
         
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return films.count
         
         
         
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = (indexPath as NSIndexPath).row
         print("Row: \(row)")
         
         print("\n\n\n\n\n\n\n\n")
         
         print("films[] ", films[row] as Film)
         
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.managedObjectContext
-        let entity = NSEntityDescription.entityForName("MyFilm", inManagedObjectContext: context)!
-        let myfilm = MyFilm(entity: entity,  insertIntoManagedObjectContext: context)
+        let entity = NSEntityDescription.entity(forEntityName: "MyFilm", in: context)!
+        let myfilm = MyFilm(entity: entity,  insertInto: context)
         
         
            // films[row] as! MyFilm
@@ -93,14 +94,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         print("Setting: " ,films[row].filmImage)
         
-        context.insertObject(myfilm)
+        context.insert(myfilm)
         do{
             try context.save()
         }catch{
             print("Film didn't save")
         }
         
-       let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("descVC") as! descViewController
+       let secondViewController = self.storyboard!.instantiateViewController(withIdentifier: "descVC") as! descViewController
         
         self.navigationController!.pushViewController(secondViewController, animated: true)
         

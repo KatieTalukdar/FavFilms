@@ -30,35 +30,35 @@ class AddFilm: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
         filImg.clipsToBounds = true
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        imagePicker.dismiss(animated: true, completion: nil)
         filImg.image = image
         
     }
-    @IBAction func addPic(sender: AnyObject) {
-        presentViewController(imagePicker, animated: true, completion: nil)
+    @IBAction func addPic(_ sender: AnyObject) {
+        present(imagePicker, animated: true, completion: nil)
     }
 
 
-    @IBAction func createEntry(sender: AnyObject) {
-        if let title = filmTitle.text where title != "" {
-            let app = UIApplication.sharedApplication().delegate as! AppDelegate
+    @IBAction func createEntry(_ sender: AnyObject) {
+        if let title = filmTitle.text , title != "" {
+            let app = UIApplication.shared.delegate as! AppDelegate
             let context = app.managedObjectContext
-            let entity = NSEntityDescription.entityForName("Film", inManagedObjectContext: context)!
-            let film = Film(entity: entity,  insertIntoManagedObjectContext: context)
+            let entity = NSEntityDescription.entity(forEntityName: "Film", in: context)!
+            let film = Film(entity: entity,  insertInto: context)
             film.filmTitle = title
             film.filmDesc = desc.text
             film.filmLink = link.text
             film.setfilmImage(filImg.image!)
             
-            context.insertObject(film)
+            context.insert(film)
             do{
                 try context.save()
             }catch{
                 print("Film didn't save")
             }
-     dismissViewControllerAnimated(true, completion: nil)
+     dismiss(animated: true, completion: nil)
         
         
     }

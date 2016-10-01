@@ -16,7 +16,7 @@ import CoreData
 extension Film {
 
     @NSManaged var filmDesc: String?
-    @NSManaged var filmImage: NSData?
+    @NSManaged var filmImage: Data?
     @NSManaged var filmLink: String?
     @NSManaged var filmTitle: String?
 

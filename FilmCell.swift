@@ -21,7 +21,7 @@ class FilmCell: UITableViewCell {
         filmImg.clipsToBounds = true
        
     }
-    func configureCell(film: Film ){
+    func configureCell(_ film: Film ){
         filmImg.image = film.getFilmImage()
         titleLbl.text = film.filmTitle
         descLbl.text = film.filmDesc

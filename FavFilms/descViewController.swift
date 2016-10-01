@@ -29,12 +29,12 @@ class descViewController: UIViewController {
     @IBOutlet weak var linkLabel: UILabel!
     
     func fetchAndSetResults(){
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let app = UIApplication.shared.delegate as! AppDelegate
         let context = app.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "MyFilm")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyFilm")
         
         do{
-            let results = try context.executeFetchRequest(fetchRequest)
+            let results = try context.fetch(fetchRequest)
             if results.count > 0{
                 
                 let thisFilm = results[results.count-1] as! MyFilm

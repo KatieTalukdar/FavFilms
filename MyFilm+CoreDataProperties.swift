@@ -17,6 +17,6 @@ extension MyFilm {
     @NSManaged var filmTitle: String?
     @NSManaged var filmDesc: String?
     @NSManaged var filmLink: String?
-    @NSManaged var filmImg: NSData?
+    @NSManaged var filmImg: Data?
 
 }

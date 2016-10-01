@@ -13,14 +13,14 @@ import UIKit
 @objc(MyFilm)
 class MyFilm: NSManagedObject {
 
-    func setfilmImage(img: UIImage){
+    func setfilmImage(_ img: UIImage){
         let data = UIImagePNGRepresentation(img)
         self.filmImg = data
     }
     
     
     func getFilmImage() -> UIImage {
-        let img = UIImage(data: self.filmImg!)
+        let img = UIImage(data: self.filmImg! as Data)
         return (img)!
         
     }
